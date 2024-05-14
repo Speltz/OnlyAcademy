@@ -12,7 +12,7 @@ import {
 } from "react-native";
 
 const image = {
-  uri: "https://c.wallhere.com/photos/d4/d4/Star_Wars_The_Last_Jedi_Star_Wars_Kylo_Ren_movies_digital_art-1179307.jpg!d",
+  uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoesRcskrviNe-KMOexxB6WWHOMLYJmUXd_RZApSNllQ&s",
 };
 
 const ProfileScreen = ({ navigation }) => {
@@ -24,23 +24,27 @@ const ProfileScreen = ({ navigation }) => {
             <Image
               style={styles.avatar}
               source={{
-                uri: "https://scontent.fcac3-1.fna.fbcdn.net/v/t1.6435-9/137266356_3582997495259765_108891295063170791_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ViRTQZ_pgNMQ7kNvgFxXqry&_nc_ht=scontent.fcac3-1.fna&oh=00_AYBCR3kgDDIcywBJ_G2pJiC-G2loUA8eofrVnmG3rXmkeQ&oe=666B21FB",
+                uri: "https://media.licdn.com/dms/image/D4E03AQF96sErT1-pBQ/profile-displayphoto-shrink_800_800/0/1692806283350?e=1721260800&v=beta&t=D08UOQqlLOdbqWLhwl4AN3LN8nveJJCUiOdjMjBsCQQ",
               }}
             />
-            <Text style={styles.name}>Alan Lenz</Text>
-            <Text style={styles.arroba}>@AlanLenz</Text>
+            <Text style={styles.name}>George Speltz</Text>
+            <Text style={styles.arroba}>@SpeltzG</Text>
           </View>
         </ImageBackground>
       </View>
 
       <View style={styles.profileDetail}>
-        <View style={[styles.detailContent, { paddingRight: 10, marginRight: 5, borderRightWidth: 2, borderRightColor: "#fff" }]}>
-          <Text style={styles.count}>200</Text>
+        <View style={[styles.detailContent, { paddingRight: 10, marginRight: 5, borderRightWidth: 2, borderRightColor: "#000" }]}>
+          <Text style={styles.count}>182</Text>
           <Text style={styles.title}>Seguidores</Text>
         </View>
-        <View style={styles.detailContent}>
-          <Text style={styles.count}>200</Text>
+        <View style={[styles.detailContent, { paddingRight: 10, marginRight: 5, borderRightWidth: 2, borderRightColor: "#000" }]}>
+          <Text style={styles.count}>150</Text>
           <Text style={styles.title}>Seguindo</Text>
+        </View>
+                <View style={styles.detailContent}>
+          <Text style={styles.count}>2</Text>
+          <Text style={styles.title}>Publcações</Text>
         </View>
       </View>
 
@@ -64,24 +68,17 @@ const ProfileScreen = ({ navigation }) => {
                   size={18}
                   style={{ color: "#000" }}
                 />{" "}
-                Direct
+                Mensagem
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.background}>
-            <Text style={styles.headline_text}>Fotos</Text>
+            <Text style={styles.headline_text}>Publicaões</Text>
             <View style={styles.imagesGrid}>
               <GridImageView
                 data={[
-                  "https://img.freepik.com/fotos-premium/por-do-sol-sobre-o-oceano-belas-paisagens-naturais_410516-12348.jpg",
-                  "https://s3.wasabisys.com/instax/74/instax/2022/08/fotografias-de-paisagens-1661176157.jpeg",
-                  "https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg?quality=90&strip=info&w=720&h=440&crop=1",
-                  "https://www.submarinoviagens.com.br/bora-nessa-trip/wp-content/uploads/2021/08/Capa-8.jpg",
-                  "https://img.freepik.com/fotos-premium/por-do-sol-sobre-o-oceano-belas-paisagens-naturais_410516-12348.jpg",
-                  "https://s3.wasabisys.com/instax/74/instax/2022/08/fotografias-de-paisagens-1661176157.jpeg",
-                  "https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg?quality=90&strip=info&w=720&h=440&crop=1",
-                  "https://www.submarinoviagens.com.br/bora-nessa-trip/wp-content/uploads/2021/08/Capa-8.jpg",
-                  "https://img.freepik.com/fotos-premium/por-do-sol-sobre-o-oceano-belas-paisagens-naturais_410516-12348.jpg",
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2bjMPwhQl-3eZwq9wT3NvU543pd6UXDo6msY-TeEJqw&s",
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRliF6rLyDKsxFG-rrjm6WmAQIQ71llqaebYQsa2NjWDg&s",
                 ]}
               />
             </View>
@@ -128,7 +125,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     position: "absolute",
-    backgroundColor: "#00CED1",
+    backgroundColor: "#ffd700",
   },
   detailContent: {
     margin: 10,
@@ -136,7 +133,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    color: "#fff",
+    color: "#000",
     fontWeight: 500,
   },
   count: {
@@ -158,19 +155,19 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   buttonOne: {
-    backgroundColor: "#00CED1",
+    backgroundColor: "#ffff00",
     padding: 8,
     borderRadius: 10,
   },
   buttonTwo: {
-    backgroundColor: "#FFF",
+    backgroundColor: "#f0e68c",
     padding: 8,
     borderRadius: 10,
   },
   buttonOneText: {
     fontSize: 15,
     fontWeight: "bold",
-    color: "#FFF",
+    color: "#000",
   },
   buttonTwoText: {
     fontSize: 15,
