@@ -2,7 +2,7 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import ProfileScreen from '../screens/Profile';
-
+import CameraScreen from '../screens/camera';
 const Stack = createNativeStackNavigator();
 
 const AppNavigation = () => {
