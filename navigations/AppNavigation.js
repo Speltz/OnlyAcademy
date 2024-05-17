@@ -11,6 +11,7 @@ const AppNavigation = () => {
       <Stack.Navigator
         screenOptions={{ headerShown: false }} initialRouteName='Profile'>
         <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Camera" component={CameraScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )

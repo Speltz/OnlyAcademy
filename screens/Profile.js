@@ -83,6 +83,16 @@ const ProfileScreen = ({ navigation }) => {
               />
             </View>
           </View>
+          <TouchableOpacity style={styles.cameraButton} onPress={() => navigation.navigate('Camera')}>
+            <Text style={styles.cameraButtonText}>
+              <Ionicons
+                name="camera-outline"
+                size={18}
+                style={{ color: "#fff" }}
+              />{" "}
+              Abrir Câmera
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
@@ -203,6 +213,17 @@ const styles = StyleSheet.create({
   imagesGrid: {
     flex: 1,
     width: 350,
+  },
+  cameraButton: {
+    backgroundColor: "#008080",
+    padding: 10,
+    borderRadius: 10,
+    marginTop: 20,
+  },
+  cameraButtonText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#fff",
   },
 });
 
