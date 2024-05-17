@@ -34,17 +34,37 @@ const ProfileScreen = ({ navigation }) => {
       </View>
 
       <View style={styles.profileDetail}>
-        <View style={[styles.detailContent, { paddingRight: 10, marginRight: 5, borderRightWidth: 2, borderRightColor: "#000" }]}>
+        <View
+          style={[
+            styles.detailContent,
+            {
+              paddingRight: 10,
+              marginRight: 5,
+              borderRightWidth: 2,
+              borderRightColor: "#000",
+            },
+          ]}
+        >
           <Text style={styles.count}>182</Text>
           <Text style={styles.title}>Seguidores</Text>
         </View>
-        <View style={[styles.detailContent, { paddingRight: 10, marginRight: 5, borderRightWidth: 2, borderRightColor: "#000" }]}>
+        <View
+          style={[
+            styles.detailContent,
+            {
+              paddingRight: 10,
+              marginRight: 5,
+              borderRightWidth: 2,
+              borderRightColor: "#000",
+            },
+          ]}
+        >
           <Text style={styles.count}>150</Text>
           <Text style={styles.title}>Seguindo</Text>
         </View>
-                <View style={styles.detailContent}>
+        <View style={styles.detailContent}>
           <Text style={styles.count}>2</Text>
-          <Text style={styles.title}>Publcações</Text>
+          <Text style={styles.title}>Publicações</Text>
         </View>
       </View>
 
@@ -61,7 +81,7 @@ const ProfileScreen = ({ navigation }) => {
                 Seguir
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.buttonTwo}>
+            <TouchableOpacity style={[styles.buttonTwo, { marginRight: 10 }]}>
               <Text style={styles.buttonTwoText}>
                 <Ionicons
                   name="paper-plane-outline"
@@ -71,9 +91,22 @@ const ProfileScreen = ({ navigation }) => {
                 Mensagem
               </Text>
             </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.cameraButton}
+              onPress={() => navigation.navigate("Camera")}
+            >
+              <Text style={styles.cameraButtonText}>
+                <Ionicons
+                  name="camera-outline"
+                  size={18}
+                  style={{ color: "#fff" }}
+                />{" "}
+                Abrir Câmera
+              </Text>
+            </TouchableOpacity>
           </View>
           <View style={styles.background}>
-            <Text style={styles.headline_text}>Publicaões</Text>
+            <Text style={styles.headline_text}>Publicações</Text>
             <View style={styles.imagesGrid}>
               <GridImageView
                 data={[
@@ -83,16 +116,6 @@ const ProfileScreen = ({ navigation }) => {
               />
             </View>
           </View>
-          <TouchableOpacity style={styles.cameraButton} onPress={() => navigation.navigate('Camera')}>
-            <Text style={styles.cameraButtonText}>
-              <Ionicons
-                name="camera-outline"
-                size={18}
-                style={{ color: "#fff" }}
-              />{" "}
-              Abrir Câmera
-            </Text>
-          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
@@ -144,7 +167,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     color: "#000",
-    fontWeight: 500,
+    fontWeight: "500",
   },
   count: {
     fontSize: 18,
@@ -184,6 +207,16 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000",
   },
+  cameraButton: {
+    backgroundColor: "#008080",
+    padding: 8,
+    borderRadius: 10,
+  },
+  cameraButtonText: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#fff",
+  },
   description: {
     fontSize: 20,
     color: "#000",
@@ -213,17 +246,6 @@ const styles = StyleSheet.create({
   imagesGrid: {
     flex: 1,
     width: 350,
-  },
-  cameraButton: {
-    backgroundColor: "#008080",
-    padding: 10,
-    borderRadius: 10,
-    marginTop: 20,
-  },
-  cameraButtonText: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#fff",
   },
 });
 
