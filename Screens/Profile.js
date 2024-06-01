@@ -106,7 +106,7 @@ const ProfileScreen = ({ navigation }) => {
             </TouchableOpacity>
             <TouchableOpacity style={styles.paymentButton}>
               <Text style={styles.paymentButtonText}
-              onPress={() => navigation.navigate("Camera")}
+              onPress={() => navigation.navigate("Pagamento")}
               >
                 <Ionicons
                   name="cash-outline"
