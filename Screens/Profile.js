@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import GridImageView from "react-native-grid-image-viewer";
 import {
@@ -92,7 +92,7 @@ const ProfileScreen = ({ navigation }) => {
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={styles.cameraButton}
+              style={[styles.cameraButton, { marginRight: 10 }]}
               onPress={() => navigation.navigate("Camera")}
             >
               <Text style={styles.cameraButtonText}>
@@ -102,6 +102,18 @@ const ProfileScreen = ({ navigation }) => {
                   style={{ color: "#fff" }}
                 />{" "}
                 Abrir Câmera
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.paymentButton}>
+              <Text style={styles.paymentButtonText}
+              onPress={() => navigation.navigate("Camera")}
+              >
+                <Ionicons
+                  name="cash-outline"
+                  size={18}
+                  style={{ color: "#fff" }}
+                />{" "}
+                Pagamento
               </Text>
             </TouchableOpacity>
           </View>
@@ -213,6 +225,16 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   cameraButtonText: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#fff",
+  },
+  paymentButton: {
+    backgroundColor: "#32CD32",
+    padding: 8,
+    borderRadius: 10,
+  },
+  paymentButtonText: {
     fontSize: 15,
     fontWeight: "bold",
     color: "#fff",
