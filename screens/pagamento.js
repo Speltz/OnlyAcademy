@@ -120,32 +120,40 @@ export default function Pagamento() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#E3F2FD', // Azul claro
     },
     statusBarBackground: {
-        backgroundColor: '#CCC',
+        backgroundColor: '#BBDEFB', // Azul claro mais escuro
         height: Constants.statusBarHeight,
     },
     header: {
         alignItems: 'center',
+        paddingVertical: 20,
+        backgroundColor: '#64B5F6', // Azul mais forte
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
     },
     headerText: {
-        color: '#1656AD',
-        marginTop: 13,
+        color: '#FFFFFF',
         fontWeight: 'bold',
         fontSize: 32,
     },
     optionsContainer: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 200,
+        marginTop: 50,
         gap: 15,
     },
     optionButton: {
-        backgroundColor: '#ccc',
+        backgroundColor: '#64B5F6',
         width: 350,
         height: 100,
         borderRadius: 20,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        elevation: 5,
     },
     optionContent: {
         alignItems: 'center',
@@ -155,5 +163,6 @@ const styles = StyleSheet.create({
     optionText: {
         fontSize: 20,
         fontWeight: 'bold',
+        color: '#FFFFFF',
     },
 });
